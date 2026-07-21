@@ -1,0 +1,18 @@
+{
+  "tool": "run_full_ariz_pipeline",
+  "input": {
+    "request_metadata": {
+      "session_id": "nexus-session-2026",
+      "target_repository": "git@github.com:user/project.git"
+    },
+    "task": {
+      "summary": "Optimize cache behavior for lower latency",
+      "desired_outcome": "Fast reads without persistent RAM-heavy cache"
+    },
+    "code_context": {
+      "language": "typescript",
+      "files": ["src/cache.ts"],
+      "architectural_notes": "Cache improves speed but increases memory usage"
+    }
+  }
+}

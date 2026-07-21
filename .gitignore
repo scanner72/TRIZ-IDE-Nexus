@@ -1,0 +1,17 @@
+# Node & Build artifacts
+node_modules/
+dist/
+out/
+.build/
+*.log
+
+# Cache directories
+.npm-cache/
+.e2e-extensions/
+.e2e-user-data/
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -1,0 +1,362 @@
+[
+  {
+    "id": 1,
+    "name": "Segmentation",
+    "description": "Divide an object or system into independent parts.",
+    "aliases": ["Division"],
+    "guidance": ["Split large components into modules", "Separate workflows into isolated stages"],
+    "software_examples": ["Break a monolith into bounded modules"],
+    "tags": ["modularity", "decomposition", "architecture"]
+  },
+  {
+    "id": 2,
+    "name": "Taking out",
+    "description": "Separate an interfering part or property from an object, or isolate only the necessary part.",
+    "aliases": ["Extraction"],
+    "guidance": ["Isolate heavy responsibilities from the hot path"],
+    "software_examples": ["Move indexing or analytics out of request handling"],
+    "tags": ["separation", "performance", "architecture"]
+  },
+  {
+    "id": 3,
+    "name": "Local quality",
+    "description": "Transition from homogeneous structure to differentiated parts optimized for local conditions.",
+    "aliases": [],
+    "guidance": ["Tailor subsystems to their workloads"],
+    "software_examples": ["Use different storage strategies per data domain"],
+    "tags": ["optimization", "specialization"]
+  },
+  {
+    "id": 4,
+    "name": "Asymmetry",
+    "description": "Replace a symmetrical form with an asymmetrical one when it improves performance.",
+    "aliases": [],
+    "guidance": ["Use different read and write strategies"],
+    "software_examples": ["Optimize read-heavy endpoints differently from write paths"],
+    "tags": ["read-write", "optimization"]
+  },
+  {
+    "id": 5,
+    "name": "Merging",
+    "description": "Bring identical or similar objects or operations together.",
+    "aliases": ["Combination"],
+    "guidance": ["Consolidate repetitive services"],
+    "software_examples": ["Combine redundant pipelines into one orchestrated job"],
+    "tags": ["consolidation", "architecture"]
+  },
+  {
+    "id": 6,
+    "name": "Universality",
+    "description": "Make a part or object perform multiple functions, eliminating the need for other parts.",
+    "aliases": [],
+    "guidance": ["Reuse existing infrastructure to avoid new services"],
+    "software_examples": ["Use an existing message bus for orchestration events"],
+    "tags": ["reuse", "simplicity"]
+  },
+  {
+    "id": 7,
+    "name": "Nested doll",
+    "description": "Place one object inside another or arrange systems hierarchically.",
+    "aliases": ["Matryoshka"],
+    "guidance": ["Encapsulate subsystems inside clear higher-level modules"],
+    "software_examples": ["Wrap provider-specific clients behind a single orchestration layer"],
+    "tags": ["encapsulation", "layering"]
+  },
+  {
+    "id": 8,
+    "name": "Anti-weight",
+    "description": "Compensate for weight or load using counterbalancing actions or resources.",
+    "aliases": [],
+    "guidance": ["Offset expensive operations with asynchronous processing"],
+    "software_examples": ["Move expensive post-processing to a background queue"],
+    "tags": ["balancing", "async"]
+  },
+  {
+    "id": 9,
+    "name": "Preliminary anti-action",
+    "description": "Prepare countermeasures in advance to reduce harmful effects.",
+    "aliases": [],
+    "guidance": ["Install safeguards before risky mutations"],
+    "software_examples": ["Run validation and backup before applying a large diff"],
+    "tags": ["safety", "validation"]
+  },
+  {
+    "id": 10,
+    "name": "Preliminary action",
+    "description": "Perform required changes in advance so the system is ready to act immediately.",
+    "aliases": [],
+    "guidance": ["Precompute or prefetch when the trigger is predictable"],
+    "software_examples": ["Warm routing tables before serving traffic"],
+    "tags": ["preparation", "performance"]
+  },
+  {
+    "id": 11,
+    "name": "Beforehand cushioning",
+    "description": "Prepare emergency means to compensate for low reliability.",
+    "aliases": [],
+    "guidance": ["Add fallbacks and recovery paths"],
+    "software_examples": ["Keep a safe rollback path for schema changes"],
+    "tags": ["resilience", "fallback"]
+  },
+  {
+    "id": 12,
+    "name": "Equipotentiality",
+    "description": "Change working conditions to avoid raising or lowering an object in a field.",
+    "aliases": [],
+    "guidance": ["Reduce unnecessary movement between layers or environments"],
+    "software_examples": ["Process data close to where it is stored"],
+    "tags": ["efficiency", "data-locality"]
+  },
+  {
+    "id": 13,
+    "name": "The other way round",
+    "description": "Invert the action used to solve the problem.",
+    "aliases": ["Inversion"],
+    "guidance": ["Reverse control flow or ownership when it simplifies the design"],
+    "software_examples": ["Pull data on demand instead of pushing it everywhere"],
+    "tags": ["inversion", "architecture"]
+  },
+  {
+    "id": 14,
+    "name": "Spheroidality",
+    "description": "Replace linear parts or motion with curved or rotary ones where beneficial.",
+    "aliases": [],
+    "guidance": ["Use cyclic or event-driven flow instead of rigid linear flow"],
+    "software_examples": ["Replace polling loops with event subscriptions"],
+    "tags": ["events", "flow"]
+  },
+  {
+    "id": 15,
+    "name": "Dynamization",
+    "description": "Allow characteristics of a system to change to be optimal at each stage of operation.",
+    "aliases": ["Dynamization principle"],
+    "guidance": ["Prefer runtime-adjustable behavior over static policies"],
+    "software_examples": ["Switch caching strategy based on load"],
+    "tags": ["adaptability", "runtime", "performance"]
+  },
+  {
+    "id": 16,
+    "name": "Partial or excessive action",
+    "description": "If exact action is difficult, use slightly less or slightly more.",
+    "aliases": [],
+    "guidance": ["Accept approximate intermediate states when exactness is expensive"],
+    "software_examples": ["Use sampled metrics instead of full tracing everywhere"],
+    "tags": ["approximation", "cost"]
+  },
+  {
+    "id": 17,
+    "name": "Another dimension",
+    "description": "Move an object into two- or three-dimensional space or use additional dimensions.",
+    "aliases": [],
+    "guidance": ["Add a new abstraction axis instead of overloading one structure"],
+    "software_examples": ["Split configuration by environment and capability"],
+    "tags": ["abstraction", "modeling"]
+  },
+  {
+    "id": 18,
+    "name": "Mechanical vibration",
+    "description": "Use oscillations or periodic processes.",
+    "aliases": [],
+    "guidance": ["Use periodic health checks or refresh cycles when continuous work is wasteful"],
+    "software_examples": ["Run scheduled reconciliation instead of constant recomputation"],
+    "tags": ["scheduling", "periodic"]
+  },
+  {
+    "id": 19,
+    "name": "Periodic action",
+    "description": "Replace continuous action with periodic or pulsed action.",
+    "aliases": [],
+    "guidance": ["Batch expensive work into intervals"],
+    "software_examples": ["Flush logs or metrics on intervals rather than every event"],
+    "tags": ["batching", "throughput"]
+  },
+  {
+    "id": 20,
+    "name": "Continuity of useful action",
+    "description": "Carry on work continuously; eliminate idle and intermittent actions.",
+    "aliases": [],
+    "guidance": ["Keep pipelines busy and remove needless waits"],
+    "software_examples": ["Stream results incrementally instead of waiting for full completion"],
+    "tags": ["streaming", "throughput"]
+  },
+  {
+    "id": 21,
+    "name": "Skipping",
+    "description": "Conduct a process or certain stages at high speed.",
+    "aliases": [],
+    "guidance": ["Skip or fast-track low-value stages"],
+    "software_examples": ["Bypass deep analysis for trivial read-only requests"],
+    "tags": ["latency", "optimization"]
+  },
+  {
+    "id": 22,
+    "name": "Blessing in disguise",
+    "description": "Use harmful factors to achieve a positive effect.",
+    "aliases": [],
+    "guidance": ["Turn constraints into signals or optimizations"],
+    "software_examples": ["Use backpressure to auto-throttle load spikes"],
+    "tags": ["constraints", "control"]
+  },
+  {
+    "id": 23,
+    "name": "Feedback",
+    "description": "Introduce feedback to improve a process or action.",
+    "aliases": [],
+    "guidance": ["Feed runtime observations back into policy decisions"],
+    "software_examples": ["Adjust retry strategy based on failure rates"],
+    "tags": ["feedback", "control"]
+  },
+  {
+    "id": 24,
+    "name": "Intermediary",
+    "description": "Use an intermediary carrier process or object.",
+    "aliases": ["Mediator"],
+    "guidance": ["Insert an adapter layer to decouple systems"],
+    "software_examples": ["Use an orchestrator service between UI and model providers"],
+    "tags": ["adapter", "decoupling"]
+  },
+  {
+    "id": 25,
+    "name": "Self-service",
+    "description": "Make an object serve itself by performing auxiliary helpful functions.",
+    "aliases": [],
+    "guidance": ["Let the system prepare or validate its own next step"],
+    "software_examples": ["Generate local metadata from the repo instead of asking the user"],
+    "tags": ["automation", "autonomy"]
+  },
+  {
+    "id": 26,
+    "name": "Copying",
+    "description": "Use a simple or inexpensive copy instead of a complex or fragile original.",
+    "aliases": [],
+    "guidance": ["Use snapshots, stubs, or mirrors where direct coupling is risky"],
+    "software_examples": ["Analyze a lightweight summary instead of the whole repository"],
+    "tags": ["snapshot", "safety"]
+  },
+  {
+    "id": 27,
+    "name": "Cheap short-living objects",
+    "description": "Replace an expensive durable object with multiple inexpensive disposables.",
+    "aliases": [],
+    "guidance": ["Prefer ephemeral artifacts over heavy persistent ones where safe"],
+    "software_examples": ["Use temporary workers for burst processing"],
+    "tags": ["ephemeral", "cost"]
+  },
+  {
+    "id": 28,
+    "name": "Mechanics substitution",
+    "description": "Replace a mechanical means with a sensory, electric, or software-based one.",
+    "aliases": [],
+    "guidance": ["Replace manual coordination with software policy"],
+    "software_examples": ["Use rule-based orchestration instead of manual review routing"],
+    "tags": ["automation", "substitution"]
+  },
+  {
+    "id": 29,
+    "name": "Pneumatics and hydraulics",
+    "description": "Use gas or liquid systems instead of solid parts where useful.",
+    "aliases": [],
+    "guidance": ["Prefer flexible flow-oriented mechanisms over rigid structures"],
+    "software_examples": ["Use streaming pipelines instead of fixed batch blocks"],
+    "tags": ["flow", "flexibility"]
+  },
+  {
+    "id": 30,
+    "name": "Flexible shells and thin films",
+    "description": "Use flexible membranes or thin films instead of solid structures.",
+    "aliases": [],
+    "guidance": ["Use thin abstraction layers instead of heavyweight frameworks"],
+    "software_examples": ["Add a lightweight middleware instead of replacing the whole provider stack"],
+    "tags": ["middleware", "lightweight"]
+  },
+  {
+    "id": 31,
+    "name": "Porous materials",
+    "description": "Make an object porous or add porous elements.",
+    "aliases": [],
+    "guidance": ["Allow selective permeability between subsystems"],
+    "software_examples": ["Expose only curated context to the analysis engine"],
+    "tags": ["filtering", "boundaries"]
+  },
+  {
+    "id": 32,
+    "name": "Color changes",
+    "description": "Change the color or transparency of an object to improve visibility or behavior.",
+    "aliases": [],
+    "guidance": ["Improve state visibility through UI indicators"],
+    "software_examples": ["Show approval status badges in the editor"],
+    "tags": ["ui", "observability"]
+  },
+  {
+    "id": 33,
+    "name": "Homogeneity",
+    "description": "Make interacting objects from the same material or properties.",
+    "aliases": [],
+    "guidance": ["Standardize contracts between modules"],
+    "software_examples": ["Use one typed JSON schema across UI and server"],
+    "tags": ["schema", "consistency"]
+  },
+  {
+    "id": 34,
+    "name": "Discarding and recovering",
+    "description": "Discard consumed or unnecessary parts and recover them if needed.",
+    "aliases": [],
+    "guidance": ["Drop transient state when it no longer adds value"],
+    "software_examples": ["Clear stale approval sessions when prompts materially change"],
+    "tags": ["lifecycle", "cleanup"]
+  },
+  {
+    "id": 35,
+    "name": "Parameter changes",
+    "description": "Change an object's physical state or operating parameters.",
+    "aliases": [],
+    "guidance": ["Tune policies dynamically through configuration"],
+    "software_examples": ["Switch fail-open vs fail-closed by deployment mode"],
+    "tags": ["configuration", "tuning"]
+  },
+  {
+    "id": 36,
+    "name": "Phase transitions",
+    "description": "Use phenomena occurring during phase transitions.",
+    "aliases": [],
+    "guidance": ["Exploit transition points between states for control"],
+    "software_examples": ["Trigger heavier validation only when moving to apply stage"],
+    "tags": ["workflow", "transitions"]
+  },
+  {
+    "id": 37,
+    "name": "Thermal expansion",
+    "description": "Use expansion or contraction effects.",
+    "aliases": [],
+    "guidance": ["Scale resources elastically based on load"],
+    "software_examples": ["Increase analysis depth only for complex tasks"],
+    "tags": ["scaling", "elasticity"]
+  },
+  {
+    "id": 38,
+    "name": "Strong oxidants",
+    "description": "Use enriched or intensified environments.",
+    "aliases": [],
+    "guidance": ["Increase signal strength when weak cues are insufficient"],
+    "software_examples": ["Escalate to richer context extraction for ambiguous prompts"],
+    "tags": ["escalation", "analysis"]
+  },
+  {
+    "id": 39,
+    "name": "Inert atmosphere",
+    "description": "Replace a normal environment with a neutral one.",
+    "aliases": [],
+    "guidance": ["Use isolated environments to reduce side effects"],
+    "software_examples": ["Run code transformations in a sandboxed review stage"],
+    "tags": ["isolation", "safety"]
+  },
+  {
+    "id": 40,
+    "name": "Composite materials",
+    "description": "Replace homogeneous materials with composites.",
+    "aliases": [],
+    "guidance": ["Combine complementary techniques into one solution"],
+    "software_examples": ["Use heuristics plus typed rules plus LLM analysis together"],
+    "tags": ["hybrid", "composition"]
+  }
+]
