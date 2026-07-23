@@ -20,7 +20,7 @@ export function analyzeArchitecturalConflict(input: AnalyzeRequest): {
   const desired = normalizeText(input.task.desired_outcome);
   const combined = [notes, summary, desired].join(' ');
 
-  if (combined.includes('latency') || combined.includes('cache') || combined.includes('memory')) {
+  if (combined.includes('latency') || combined.includes('cache') || combined.includes('memory') || combined.includes('speed')) {
     return {
       technical: {
         parameter_to_optimize: 'execution_speed (latency)',
@@ -31,6 +31,38 @@ export function analyzeArchitecturalConflict(input: AnalyzeRequest): {
         required_properties: [
           'must_be_present_for_instant_read',
           'must_be_absent_to_free_ram'
+        ]
+      }
+    };
+  }
+
+  if (combined.includes('security') || combined.includes('auth') || combined.includes('permission')) {
+    return {
+      technical: {
+        parameter_to_optimize: 'system_security',
+        parameter_that_degrades: 'user_convenience'
+      },
+      physical: {
+        element: 'access_control_gate',
+        required_properties: [
+          'must_be_strict_to_prevent_unauthorized_access',
+          'must_be_transparent_to_minimize_friction'
+        ]
+      }
+    };
+  }
+
+  if (combined.includes('lock') || combined.includes('concurrency') || combined.includes('async') || combined.includes('parallel')) {
+    return {
+      technical: {
+        parameter_to_optimize: 'throughput_concurrency',
+        parameter_that_degrades: 'data_consistency'
+      },
+      physical: {
+        element: 'state_synchronization_lock',
+        required_properties: [
+          'must_be_held_to_guarantee_consistency',
+          'must_be_released_to_allow_parallel_execution'
         ]
       }
     };
@@ -55,6 +87,12 @@ export function evaluateIkr(conflict: PhysicalContradiction): string {
   if (conflict.element === 'data_cache_layer') {
     return 'Data is read instantly by using an on-demand mechanism without allocating a permanent RAM cache.';
   }
+  if (conflict.element === 'access_control_gate') {
+    return 'Security verification occurs seamlessly without introducing manual user steps or overhead.';
+  }
+  if (conflict.element === 'state_synchronization_lock') {
+    return 'State consistency is guaranteed autonomously using lock-free data structures without blocking concurrent execution.';
+  }
 
   return 'The system achieves the desired outcome by using existing resources while avoiding additional permanent architectural burden.';
 }
@@ -68,6 +106,18 @@ const principleRules: Array<{
       conflict.parameter_to_optimize === 'execution_speed (latency)' &&
       conflict.parameter_that_degrades === 'memory_footprint (ram)',
     principles: [2, 10, 15, 28]
+  },
+  {
+    when: (conflict) =>
+      conflict.parameter_to_optimize === 'system_security' &&
+      conflict.parameter_that_degrades === 'user_convenience',
+    principles: [2, 11, 24]
+  },
+  {
+    when: (conflict) =>
+      conflict.parameter_to_optimize === 'throughput_concurrency' &&
+      conflict.parameter_that_degrades === 'data_consistency',
+    principles: [1, 15, 37]
   },
   {
     when: (conflict) =>
